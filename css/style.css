@@ -16,6 +16,7 @@ html body header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
 }
 html body header .header-left {
   display: flex;
@@ -37,6 +38,9 @@ html body header .header-left nav li {
   margin-right: 20px;
   list-style-type: none;
   position: relative;
+}
+html body header .header-left nav li:last-child {
+  display: none;
 }
 html body header .header-left nav li a {
   color: #000;
@@ -199,6 +203,7 @@ html body .fidelity {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
+  width: 100%;
 }
 html body .fidelity div {
   display: flex;
@@ -224,6 +229,7 @@ html body .sup-menu {
   align-items: center;
 }
 html body .sup-menu h2 {
+  text-align: center;
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 600;
@@ -288,6 +294,7 @@ html body footer .app-links img {
   border: 1px solid #fff;
   border-radius: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 html body footer .links {
   display: flex;
@@ -315,7 +322,7 @@ html body footer .manger-bouger {
     height: 50vh;
   }
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 811px) {
   html body header .header-left {
     margin-left: 15px;
   }
@@ -330,6 +337,7 @@ html body footer .manger-bouger {
     flex-direction: column;
     position: absolute;
     top: 100px;
+    left: 0;
     z-index: 1000;
     background-color: #fff;
     padding: 50px;
@@ -342,6 +350,32 @@ html body footer .manger-bouger {
   }
   html body .pub {
     height: 30vh;
+  }
+  html body .fidelity .more-advantages img {
+    width: 95%;
+  }
+  html body footer {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  html body header .header-left nav li:last-child {
+    display: block;
+  }
+  html body header .header-right {
+    display: none;
+  }
+  html body .news h2 {
+    font-size: 35px;
+  }
+  html body .sup-menu h2 {
+    font-size: 35px;
+  }
+  html body footer .links {
+    flex-direction: column;
+  }
+  html body footer .links div {
+    margin-top: 15px;
   }
 }
 
